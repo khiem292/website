@@ -1,41 +1,72 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cao Phạm Chính Khiêm</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>CAO PHẠM CHÍNH KHIÊM</h1>
-        <p> Sinh viên kỹ thuật phần mềm </p>
-    </header>
-    <nav>
-        <a href="index.html">trang chủ</a><br>
-        <a href="about.html">giới thiệu</a><br>
-        <a href="contact.html">liên hệ</a><br>
-        <a href="https://github.com/khiem292" target="_blank" rel="noopener">github</a>
-    </nav>
-    <main>
-        <section id="gioi-thieu">
-            <h2>Xin chào!</h2>
-            <p>tôi là xin viên năm 2 ngành kỹ thuật phần mềm, thích lập trình wed</p>
-        </section>
-        <section id="ky-nang">
-            <h2>kỹ năng</h2>
-            <p>biết lập trình wed</p>
-            <p>có khả năng làm việc nhóm</p>
-        </section>
-    </main>
-    <footer>
-        <address>
-            email: <a href="mailto:cpckhiem9e6gmail.com">cpckhiem9e6gmail.com</a>
-            tel: <a href="tel:0943590976">0943590976</a>
-        </address>
-        <p>&copy; 2026 Cao Phạm Chính Khiêm. All rights reserved.</p>
-        <time datetime="2026-09-15">ngày cập nhật 15/09/2026</time>
-    </footer>
-</body>
+        <!DOCTYPE html>
+        <html lang="vi">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Cao Phạm Chính Khiêm</title>
+            <link rel="stylesheet" href="css/style.css">
+        </head>
+        <body>
+            <header>
+                <h1 id="main-title">CAO PHẠM CHÍNH KHIÊM</h1>
+                <p> Sinh viên kỹ thuật phần mềm </p>
+            </header>
+            <nav>
+                <ul> 
+                    <li><a href="index.html">trang chủ</a></li>
+                    <li><a href="about.html">giới thiệu</a></li>
+                    <li><a href="contact.html">liên hệ</a></li>
+                </ul>
+            </nav>
+            <main class="highlight">
+                <section id="gioi-thieu">
+                    <h2>Xin chào!</h2>
+                    <p>tôi là xin viên năm 2 ngành kỹ thuật phần mềm, thích lập trình wed</p>
+                </section>
+                <section id="ky-nang">
+                    <h2>kỹ năng</h2>
+                    <p>biết lập trình wed</p>
+                    <p>có khả năng làm việc nhóm</p>
+                </section>
+                <div class="card">
+                    <h2>Sở thích Của Tôi</h2>
+                    <p>lập Trình Wed</p>
+                </div>
+            </main>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>thông tin cá nhân</legend>
+                <label for="name">tên:</label>
+                <input type="text" id="name" name="name" required minlength="2" title="vui lòng nhập tên của bạn từ 2 kí tự trở lên"><br>
+                <label for="email">email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="tel">số điện thoại:</label>
+                <input type="tel" id="tel" name="tel" required pattern="[0-9]{10,11}" title="Vui lòng nhập số điện thoại hợp lệ (10-11 chữ số)"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Nội Dung</legend>
+                <label for="subject">Tỉnh Thành Phố</label>
+                <select id="subject" name="subject" required>
+                    <option value="">--Chọn Tỉnh Thành Phố--</option><br>
+                    <option value="hcm">TP. Hồ Chí Minh</option>
+                    <option value="hn">Hà Nội</option>
+                    <option value="dn">Đà Nẵng</option>
+                    <option value="ct">Cần Thơ</option>
+                </select>
+                <label for="msg">tin nhắn</label>
+                <textarea id="msg" name="msg" rows="5" required></textarea><br>
+            </fieldset>
+            <button type="submit">gửi </button><br>
+            <button type="reset">xóa</button><br>
+        </form>
+            <footer>
+                <address>
+                    email: <a href="mailto:cpckhiem9e6gmail.com">cpckhiem9e6gmail.com</a>
+                    tel: <a href="tel:0943590976">0943590976</a>
+                </address>
+                <p>&copy; 2026 Cao Phạm Chính Khiêm. All rights reserved.</p>
+                <time datetime="2026-09-15">ngày cập nhật 15/09/2026</time>
+            </footer>
+        </body>
 
-</html>
+        </html>
