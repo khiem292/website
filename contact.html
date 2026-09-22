@@ -1,36 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thông tin liên hệ</title>
-    
-</head>
-<body>
-    <header>
-        <h1>Thông tin liên hệ</h1>
-        <p>địa chỉ: 123 Đường ABC, Quận XYZ, TP. HCM</p>
-        <p>sdt: 0943590976</p>
-    </header>
-    <nav>
-        <a href="index.html">trang chủ</a><br>
-        <a href="about.html">giới thiệu</a><br>
-        <a href="contact.html">liên hệ</a><br>
-    </nav>
-    <main>
-        <section id="lien-he">
-            <h2>Liên hệ</h2>
-            <p>Để liên hệ với tôi, bạn có thể gửi email đến địa chỉ: <a href="mailto:cpckhiem9e6gmail.com">cpckhiem9e6gmail.com</a></p>
-            <p>Bạn cũng có thể gọi điện thoại đến số: 0943590976</p>
-        </section>
-    </main>
-    <footer>
-        <address>
-            email: <a href="mailto:cpckhiem9e6gmail.com">cpckhiem9e6gmail.com</a>
-            tel: <a href="tel:0943590976">0943590976</a>
-        </address>
-        <p>&copy; 2026 Cao Phạm Chính Khiêm. All rights reserved.</p> 
-        <time datetime="2026-09-15">ngày cập nhật 15/09/2026</time>
-    </footer>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Đây là phần thông tin liên hệ cơ bản của sinh viên Cao Phạm Chính Khiêm Ngành KTPM trường đại học Gia Định">
+        <title>Cao Phạm Chính Khiêm - Thông tin liên hệ</title>
+        <link rel="stylesheet" heref="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Thông tin liên hệ</h1>
+            <p>địa chỉ: 123 Đường ABC, Quận XYZ, TP. HCM</p>
+            <p>sdt: 0943590976</p>
+        </header>
+        <nav>
+            <a href="index.html">trang chủ</a><br>
+            <a href="about.html">giới thiệu</a><br>
+            <a href="contact.html">liên hệ</a><br>
+        </nav>
+        <main>
+            <section id="lien-he">
+                <h2>Liên hệ</h2>
+                <p>Để liên hệ với tôi, bạn có thể gửi email đến địa chỉ: <a href="mailto:cpckhiem9e6gmail.com">cpckhiem9e6gmail.com</a></p>
+                <p>Bạn cũng có thể gọi điện thoại đến số: 0943590976</p>
+            </section>
+        </main>
+        <form action="#" method="post">
+                <fieldset>
+                    <legend>thông tin cá nhân</legend>
+                    <label for="name">họ tên:</label>
+                    <input type="text" id="name" name="name" required minlength="2" title="vui lòng nhập tên của bạn từ 2 kí tự trở lên"><br>
+                    <label for="email">email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required><br>
+                    <label for="tel">số điện thoại:</label>
+                    <input type="tel" id="tel" name="tel" required pattern="[0-9]{10,11}" title="Vui lòng nhập số điện thoại hợp lệ (10-11 chữ số)"><br>
+                    <label for="date">chọn ngày tháng</label>
+                    <input type="date" id="date" name="ngaythang" required>
+                    <label for="un">Trường Đại Học</label>
+                    <input list="uni" id="un" name="un" required>
+                    <datalist id="uni">
+                        <option value="GDU">Đại Học Gia Định</option>
+                        <option value="VLU">Đại Học Văn Lang</option>
+                        <option value="IUH">Đại Học Công Nghiệp Tphcm</option>
+                        <option value="DNC">Đại Học Nam Cần Thơ</option>
+                    </datalist> 
+                </fieldset>
+                <fieldset>
+                    <legend>Nội Dung Liên hệ</legend>
+                    <label for="subject">Chủ đề</label>
+                    <select id="subject" name="subject" required >
+                        <option value="">--Chọn Chủ Đề--</option><br>
+                        <option value="htkt">Hổ Trợ Kĩ thuật</option>
+                        <option value="tdkt">Trao Đổi Kiến Thức</option>
+                        <option value="kh">Khác</option>
+                    </select>
+                    <label>Ưu tiên liên hệ qua</label>
+                    <fielset>
+                    <legend>Kênh Liên Hệ</legend>
+                    <input type="radio" id="via-email" name="contact-via" value="email" checked>
+                    <label for="via-email">Gmail</label>
+                    <input type="radio" id="via-std" name="contact-via" value="std">
+                    <label for="via-std">Số Điện Thoại</label>
+                    <input type="radio" id="via-zalo" name="contact-via" value="zalo">
+                    <label for="via-zalo">Zalo</label>
+                    <label for="mes">tin nhắn: </label>
+                <textarea id="mes" name="mes" row="5" placeholder="nhập nội dung tin nhắn..." required minlength="10" maxlength="500"></textarea>
+                <label> 
+                    <input type="checkbox" name="agree" required>
+                    tôi đồng ý <a href="#">Điều khoản sử dụng</a>
+                </label>
+                </fielset>
+                </fieldset>
+                <button type="submit">gửi </button><br>
+                <button type="reset">xóa</button><br>
+            </form>
+        <footer>
+            <address>
+                email: <a href="mailto:cpckhiem9e6gmail.com">cpckhiem9e6gmail.com</a>
+                tel: <a href="tel:0943590976">0943590976</a>
+            </address>
+            <p>&copy; 2026 Cao Phạm Chính Khiêm. All rights reserved.</p> 
+            <time datetime="2026-09-15">ngày cập nhật 15/09/2026</time>
+        </footer>
+    </body>
+    </html>
